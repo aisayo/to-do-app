@@ -1,0 +1,1 @@
+# rails-book-ratings
