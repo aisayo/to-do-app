@@ -1,1 +1,1 @@
-# rails-book-ratings
+# react-project
