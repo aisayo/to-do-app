@@ -1,1 +1,1 @@
-# udemy-redux
+# fun-to-do-rails-react
