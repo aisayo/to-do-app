@@ -26,3 +26,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.TaskCard {
+  color: white;
+  font-size: 1%;
+  width: 100px;
+	height: 100px;
+	background: lightblue;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
