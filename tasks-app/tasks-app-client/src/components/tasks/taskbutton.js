@@ -1,25 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-class TaskButton extends Component {
+const TaskButton = (props) => {
 
-
-    handleOnClick = (e) => {
-        alert("clicked")
-    }
-
-    render() {
         return (
             <div>
                 <button className="TaskCard" 
-                    onClick={this.handleOnClick}>
+                    onClick={props.handleOnClick}>
                     Task
                 </button>
                
             </div>
             
         )
-    }
+  
 }
 
 export default TaskButton;
