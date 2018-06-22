@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import TaskForm from './taskform'
 import TaskButton from './taskbutton'
+import TaskList from './taskslist';
 
 class Tasks extends PureComponent {
     
@@ -41,6 +42,7 @@ class Tasks extends PureComponent {
                     handleOnChange={this.handleOnChange}
                     handleOnSubmit={this.handleOnSubmit}
                     />
+                    <TaskList task={this.state.task}/>
             </div>
         )
     }
