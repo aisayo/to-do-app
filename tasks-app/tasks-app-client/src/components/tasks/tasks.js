@@ -42,7 +42,7 @@ class Tasks extends PureComponent {
                     handleOnChange={this.handleOnChange}
                     handleOnSubmit={this.handleOnSubmit}
                     />
-                    <TaskList task={this.state.task}/>
+                    <TaskList tasks={this.state.task}/>
             </div>
         )
     }
