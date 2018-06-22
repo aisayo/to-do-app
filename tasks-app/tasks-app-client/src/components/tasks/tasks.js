@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import TaskForm from './taskform'
 import TaskButton from './taskbutton'
 
-class Tasks extends Component {
+class Tasks extends PureComponent {
     
     constructor(){
         super();
