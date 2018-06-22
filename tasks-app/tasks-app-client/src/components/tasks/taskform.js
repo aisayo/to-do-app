@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class TaskForm extends Component {
 
     constructor(){
@@ -16,12 +15,21 @@ class TaskForm extends Component {
         const { name, value } = event.target;
         this.setState({[name]: value});
     }
+
+    handleOnSubmit = (event) => {
+        event.preventDefault()
+        this.setState({
+            task: this.state.task
+
+        })
+        console.log(this.state.task)
+    }
     
     render() {
         return (
             <div>
             <h3>Create a New Task</h3>
-            <form className="TaskForm">
+            <form className="TaskForm" onSubmit={(event) => this.handleOnSubmit(event)}>
                 <label htmlFor="task" className="TaskLabel">Task:</label>
                 <input 
                     className="TaskInput"

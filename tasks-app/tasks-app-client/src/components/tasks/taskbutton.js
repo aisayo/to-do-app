@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import TaskForm from './taskform'
 
 
-class Task extends Component {
+class TaskButton extends Component {
 
 
     handleOnClick = (e) => {
@@ -16,13 +15,11 @@ class Task extends Component {
                     onClick={this.handleOnClick}>
                     Task
                 </button>
-                <div>
-                    <TaskForm />
-                </div>
+               
             </div>
             
         )
     }
 }
 
-export default Task;
+export default TaskButton;
