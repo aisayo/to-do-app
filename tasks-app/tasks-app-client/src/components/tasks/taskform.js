@@ -1,4 +1,5 @@
 import React from 'react';
+import SubmitButton from './submitbutton';
 
 const TaskForm = (props) => {
 
@@ -15,7 +16,7 @@ const TaskForm = (props) => {
                 onChange={(event) => props.handleOnChange(event)}
             />
 
-            < input type="submit" />
+            <SubmitButton />
 
         </form>
     </div>

@@ -5,14 +5,21 @@ import TaskList from './taskslist';
 
 class Tasks extends PureComponent {
     
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {
             task: '',
             completed: false,
         }
     }
+
+    componentDidMount() {
+        fetch('http://localhost:3001/tasks.json')
+        .then(res => console.log(res.json()))
+        
+    }
+    
 
     handleOnChange = (event) => {
         const { name, value } = event.target;
@@ -34,15 +41,21 @@ class Tasks extends PureComponent {
 
     render() {
         return (
-            <div>
-                <TaskButton handleOnClick={this.handleOnClick} />
-                <TaskForm 
-                    task={this.state.task}
-                    completed={this.state.completed}
-                    handleOnChange={this.handleOnChange}
-                    handleOnSubmit={this.handleOnSubmit}
+            <div className="TasksContainer">
+                <div>
+                    <TaskButton handleOnClick={this.handleOnClick} />
+                </div>
+                <div>
+                    <TaskForm 
+                        task={this.state.task}
+                        completed={this.state.completed}
+                        handleOnChange={this.handleOnChange}
+                        handleOnSubmit={this.handleOnSubmit}
                     />
+                </div>
+                <div className="TaskList">
                     <TaskList tasks={this.state.task}/>
+                </div>
             </div>
         )
     }
